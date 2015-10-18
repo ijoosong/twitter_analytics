@@ -1,15 +1,9 @@
-<html>
-  <head>
-    {% if title %}
-    <title>{{ title }} - twitter stuff</title>
-    {% else %}
-    <title>Welcome to twitter stuff?</title>
-    {% endif %}
-  </head>
-  <body>
-    <h1>Hello, {{ user.name }}!</h1>
-    {% for tweet in tweets %}
-    <div><p>{{ tweet.username }} tweeted: <b>{{ tweet.message }}</b></p></div>
-    {% endfor %}
-  </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+  <h1>Hi, {{ user.name }}</h1>
+  {% for tweet in tweets %}
+  <div>
+    <p>{{ tweet.username }} says: <b>{{ tweet.message}}</b></p>
+  </div>
+  {% endfor %}
+{% endblock %}
