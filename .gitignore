@@ -1,2 +1,6 @@
+#virtualenv
 /flask
+
+#python compiling files
 *.pyc
+*/*.pyc
